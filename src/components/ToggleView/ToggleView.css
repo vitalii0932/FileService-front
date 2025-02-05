@@ -1,0 +1,49 @@
+.toggle_user_buttons {
+	position: sticky;
+	top: -20px;
+	padding: 20px 10px;
+	transition: all 0.3s ease;
+	background-color: var(--content-color);
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 5px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle_btn {
+	background-color: var(--search-and-filter-bg-color);
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	width: 50px;
+	padding: 8px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle_btn i {
+	color: var(--main-font-color);
+	font-size: 16px;
+}
+
+.toggle_btn:first-child {
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+	justify-content: flex-end;
+}
+
+.toggle_btn:last-child {
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+	justify-content: flex-start;
+}
+
+.toggle_btn img {
+	width: 20px;
+}
+
+.toggle_btn.active {
+	background-color: var(--filter-hover-bg-color);
+}

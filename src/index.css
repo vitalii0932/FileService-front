@@ -1,0 +1,59 @@
+:root {	
+	--bg-color: #f5f5f5;
+	--other-font-color: #333;
+	--main-font-color: #111;
+	--main-font-color-hover: #000;
+	--bg-items-color: #fff;
+	--side-btns-hover-bg-color: #e0e0e0;
+	--content-color: #f0f0f0;
+	--webkit-scrollbar-thumb-color: #b3b3b3;
+	--webkit-scrollbar-thumb-hover-color: #a6a6a6;
+	--search-and-filter-bg-color: #e0e0e0;
+	--th-hover-bg-color: #d9d9d9;
+	--search-color: #727272;
+	--search-active-color: #000;
+	--filter-hover-bg-color: #c0c0c0;
+	--file-operation-bg-hover-color: #d0d0d0;
+}
+
+.dark-theme {
+	--bg-color: #111014;
+	--other-font-color: #c4ceee;
+	--main-font-color: #eee;
+	--main-font-color-hover: #fff;
+	--bg-items-color: #29282d;
+	--side-btns-hover-bg-color: #35383c;
+	--content-color: #1a191f;
+	--webkit-scrollbar-thumb-color: #585252;
+	--webkit-scrollbar-thumb-hover-color: #696565;
+	--search-and-filter-bg-color: #282a2c;
+	--th-hover-bg-color: #302f35;
+	--search-color: #727272;
+	--search-active-color: #ddd;
+	--filter-hover-bg-color: #37393b;
+	--file-operation-bg-hover-color: #47464b;
+}
+
+@font-face {
+	font-family: 'Titillium_light';
+	src: url('/fonts/TitilliumWeb-Light.ttf');
+}
+
+@font-face {
+	font-family: 'Titillium_extra_light';
+	src: url('/fonts/TitilliumWeb-ExtraLight.ttf');
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('/fonts/OpenSans-VariableFont.ttf');
+}
+
+body {
+	font-family: 'OpenSans';
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg-color);
+	color: var(--other-font-color);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}

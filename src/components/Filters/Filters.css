@@ -1,0 +1,71 @@
+.filters {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 20px;
+	padding: 30px;
+}
+
+.filter {
+	background-color: var(--search-and-filter-bg-color);
+	border-radius: 15px;
+	padding: 7px 15px;
+	font-size: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	cursor: pointer;
+	position: relative;
+	color: var(--main-font-color);
+}
+
+.filter i {
+	font-size: 14px;
+	margin-right: 8px;
+}
+
+.filter span {
+	font-size: 9px;
+	margin-left: 8px;
+}
+
+.filter:hover {
+	background-color: var(--filter-hover-bg-color);
+}
+
+.dropdown_menu_filter {
+	position: absolute;
+	min-width: 100%;
+	width: max-content;
+	top: 100%;
+	left: 0;
+	background-color: var(--content-color);
+	border-radius: 10px;
+	z-index: 1000;
+	box-shadow: -2px 6px 12px rgba(0, 0, 0, 0.8);
+	padding: 10px 0;
+	color: var(--main-font-color);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown_menu_filter ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.dropdown_menu_filter li {
+	padding: 8px 10px;
+	cursor: pointer;
+}
+
+.dropdown_menu_filter li:hover {
+	background-color: var(--filter-hover-bg-color);
+	color: var(--main-font-color-hover);
+}
+
+.dropdown_menu_filter i {
+	margin-right: 10px;
+}

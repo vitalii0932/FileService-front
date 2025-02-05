@@ -1,0 +1,29 @@
+.search {
+	width: 700px;
+	margin: auto;
+	position: relative;
+}
+
+.search input[type='text'] {
+	padding: 11px 20px;
+	width: 100%;
+	background-color: var(--search-and-filter-bg-color);
+	border: none;
+	border-radius: 15px;
+	color: var(--search-color);
+	transition: background-color 0.3s ease, color 0.3s ease;
+	font-size: 16px;
+}
+
+.search i {
+	position: absolute;
+	right: -20px;
+	top: 19px;
+	cursor: pointer;
+}
+
+.search input[type='text']:focus {
+	outline: none;
+	color: var(--search-active-color);
+	transition: color 0.3s ease;
+}

@@ -1,0 +1,88 @@
+.user_files_table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	font-family: 'OpenSans';
+	font-size: 18px;
+	color: var(--main-font-color);
+	transition: color 0.3s ease;
+}
+
+.user_files_table th,
+.user_files_table td {
+	padding: 10px 15px;
+	text-align: left;
+}
+
+.user_files_table th {
+	font-weight: bold;
+	letter-spacing: 1px;
+	vertical-align: middle;
+}
+
+.user_files_table tbody tr,
+th {
+	transition: background-color 0.3s ease;
+	border-bottom: 0.5px solid var(--main-font-color);
+}
+
+.user_files_table tbody tr:hover {
+	background-color: var(--th-hover-bg-color);
+}
+
+.user_files_table tbody tr:hover .hidden_icons {
+	color: var(--main-font-color-hover);
+}
+
+.file_icon {
+	width: 25px;
+	padding-right: 15px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.file_operation {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+.hidden_icons {
+	display: flex;
+	color: var(--content-color);
+	align-items: center;
+	text-align: center;
+	transition: color 0.3s ease;
+}
+
+.file_operation i {
+	text-align: center;
+	min-height: 15px;
+	min-width: 15px;
+	padding: 8px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.file_operation i:hover {
+	background-color: var(--file-operation-bg-hover-color);
+}
+
+.user_files_table th:nth-child(1),
+.user_files_table td:nth-child(1) {
+	width: 50%;
+}
+
+.user_files_table th:nth-child(2),
+.user_files_table td:nth-child(2),
+.user_files_table th:nth-child(3),
+.user_files_table td:nth-child(3),
+.user_files_table th:nth-child(4),
+.user_files_table td:nth-child(4) {
+	width: 12%;
+}
+
+.user_files_table th:nth-child(4),
+.user_files_table td:nth-child(4) {
+	width: 8%;
+}
