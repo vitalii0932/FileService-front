@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 import './ToggleView.css'
 
 export default function ToggleView() {
-	const [activeView, setActiveView] = useState('rows')
+	const [activeView, setActiveView] = useState(
+		() => localStorage.getItem('view') || 'rows' // Беремо значення з localStorage
+	)
 	const [isDarkMode, setIsDarkMode] = useState(
 		() => localStorage.getItem('theme') === 'dark'
 	)
@@ -22,6 +24,8 @@ export default function ToggleView() {
 
 	const handleToggle = view => {
 		setActiveView(view)
+		localStorage.setItem('view', view) // Оновлюємо localStorage
+		window.dispatchEvent(new Event('storage')) // Генеруємо подію зміни localStorage
 	}
 
 	return (

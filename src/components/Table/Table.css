@@ -1,4 +1,9 @@
 .user_files_table {
+	flex-grow: 1;
+	overflow-y: auto;
+}
+
+.user_files_table, input[type='text'] {
 	width: 100%;
 	border-collapse: collapse;
 	table-layout: fixed;

@@ -5,7 +5,7 @@ import './SelectFiles.css'
 
 export default function SelectFiles() {
 	return (
-		<section>
+		<section className='select_files'>
 			<Search />
 			<Filters />
 			<ToggleView />

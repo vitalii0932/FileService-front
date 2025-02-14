@@ -1,7 +1,8 @@
-import './Table.css'
+import './Blocks.css'
+import Block from '../Block/Block'
 import { useState } from 'react'
 
-export default function Table() {
+export default function Blocks() {
 	const [files, setFiles] = useState([
 		{id: 1, name: 'Data 1', type: 'archive', lastChange: '20.01.2025', size: '1mb'},
 		{id: 2, name: 'Data 2', type: 'audio', lastChange: '15.10.2024', size: '2mb'},
@@ -29,39 +30,10 @@ export default function Table() {
 	}
 
 	return (
-		<table className="user_files_table">
-		<thead>
-			<tr>
-				<th>File name</th>
-				<th>File type</th>
-				<th>Last change</th>
-				<th>File size</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
+		<section className='blocks'>
 			{files.map((file) => (
-				<tr id={file.id}>
-					<td>
-						<input type="text" value={file.name} onChange={(e) => onChange(file.id, e.target.value)} />
-					</td>
-					<td>
-						<img src={`/images/file_icons/${file.type}.svg`} className="file_icon" />
-						{file.type}
-					</td>
-					<td>{file.lastChange}</td>
-					<td>{file.size}</td>
-					<td className="file_operation">
-					<div className="hidden_icons">
-						<i className="fa-solid fa-download"></i>
-						<i className="fa-regular fa-pen-to-square"></i>
-						<i className="fa-regular fa-star"></i>
-					</div>
-					<i className="fa-regular fa-trash-can"></i>
-				</td>
-				</tr>
+				<Block key={file.id} name={file.name} type={file.type} lastChange={file.lastChange} size={file.size} />
 			))}
-		</tbody>
-	</table>
+		</section>
 	)
 }
